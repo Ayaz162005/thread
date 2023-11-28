@@ -41,12 +41,8 @@ export default async function ThreadsTab({
 }: Params) {
   let result: Result;
 
-  if (accountType === "Community") {
-    // result = await fetchCommunityPosts(accountId);
-    result = "";
-  } else {
-    result = await fetchUserPosts(accountId);
-  }
+  result = await fetchUserPosts(accountId);
+
   console.log(result);
   //   if (!result) {
   //     redirect("/");
